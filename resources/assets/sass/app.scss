@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -109,3 +110,14 @@ footer {
     font-weight: bold;
   }
 }
+=======
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+>>>>>>> 9f5d8ae91ade4d3e0ba59b85a3b5cd5cd8b7149f
