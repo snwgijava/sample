@@ -8,13 +8,12 @@
       <h5>注册</h5>
     </div>
     <div class="panel-body">
-      @include('shared._error')
-
       <form method="POST" action="{{ route('users.store') }}">
           {{ csrf_field() }}
-
           <div class="form-group">
             <label for="name">名称：</label>
+            <!-- "{{ old('name') }}  全局辅助函数 old 来帮助我们在 Blade
+             模板中显示旧输入数据。这样当我们信息填写错误，页面进行重定向访问时，输入框将自动填写上最后一次输入过的数据。 -->
             <input type="text" name="name" class="form-control" value="{{ old('name') }}">
           </div>
 
