@@ -9,6 +9,12 @@ use Auth;
 class SessionsController extends Controller
 {
     //
+        //未登录用户只能访问登录页面
+    public function __construct(){
+        $this->middleware('guest',[
+            'only' => ['create']
+        ]);
+    }
     public function create(){
         return view('sessions.create');
     }
