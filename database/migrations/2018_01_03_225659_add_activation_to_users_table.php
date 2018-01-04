@@ -11,24 +11,24 @@ class AddActivationToUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('activation_token')->nullable();
-            $table->boolean('activated')->default(false);
-        });
-    }
+     public function up()
+     {
+         Schema::table('users', function (Blueprint $table) {
+             $table->string('activation_token')->nullable();
+             $table->boolean('activated')->default(false);
+         });
+     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('activation_token');
-            $table->dropColumn('activated');
-        });
-    }
+     /**
+      * Reverse the migrations.
+      *
+      * @return void
+      */
+     public function down()
+     {
+         Schema::table('users', function (Blueprint $table) {
+             $table->dropColumn('activation_token');
+             $table->dropColumn('activated');
+         });
+     }
 }

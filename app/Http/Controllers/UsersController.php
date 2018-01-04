@@ -36,7 +36,9 @@ class UsersController extends Controller
     }
 
     public function show(User $user){
-        return view('users.show', compact('user'));
+        //取出30条用户发出的微博，时间最新的排
+        $statuses = $user->statuses()->orderBy('created_at','dest')->paginate(30);
+        return view('users.show', compact('user','statuses'));
     }
 
     public function store(Request $request){
